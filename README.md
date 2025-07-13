@@ -87,8 +87,6 @@ cd player-reid-tracker
 
 
 
-
-
 python src/detect.py --model models/best.pt --input data/input.mp4 --output data/tracked_output.mp4 --device cuda --threshold 0.6
 
 **Inspect results**:
