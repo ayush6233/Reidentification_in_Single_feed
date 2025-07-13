@@ -45,19 +45,6 @@ pip install torch torchvision opencv-python numpy ultralytics
 
 GPU Users: Ensure CUDA drivers and torch installation are compatible (e.g., pip install torch --extra-index-url https://download.pytorch.org/whl/cu121).
 
-🗂 Repository Structure
-
-├── README.md             # Project documentation
-├── requirements.txt      # Exact package versions
-├── models/               # Pretrained weights (e.g., best.pt)
-├── src/                  # Python source code
-│   ├── tracker.py        # ReIDTracker & EmbeddingNet classes
-│   ├── detect.py         # YOLO model wrapper and video processing
-│   └── utils.py          # Helper functions (preprocessing, IO)
-├── data/                 # Sample videos and outputs
-│   ├── input.mp4
-│   └── tracked_output.mp4
-└── notebooks/            # Optional analysis notebooks
 
 💡 How It Works
 
@@ -99,21 +86,12 @@ git clone https://github.com/your-username/player-reid-tracker.git
 cd player-reid-tracker
 
 
-2. **Install requirements**:
-   ```bash
-pip install -r requirements.txt
-
-Prepare your model:
-
-Place your YOLOv8 weights (best.pt) in models/.
-
-Run detection & tracking:
 
 
 
 python src/detect.py --model models/best.pt --input data/input.mp4 --output data/tracked_output.mp4 --device cuda --threshold 0.6
 
-5. **Inspect results**:
+**Inspect results**:
    - View `data/tracked_output.mp4` to see tracked players with consistent IDs.
 
 ---
